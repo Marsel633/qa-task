@@ -21,5 +21,14 @@
       "price": 600,
       "image": "https://images.unsplash.com/photo-1501612780327-45045538702b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGNvbmNlcnR8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60"
     }
+  ],
+  "feedbacks": [
+    {
+      "firstname": "Marsel",
+      "lastname": "Akparov",
+      "email": "delfinkitov@gmail.com",
+      "message": "hello world!",
+      "id": 1
+    }
   ]
 }

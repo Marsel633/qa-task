@@ -11,12 +11,15 @@ import aboutImg3 from "./assets/about_3.png"
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { getEvents } from './store/eventsSlice';
+import cardLogo1 from "./assets/visa.png"
+import cardLogo2 from "./assets/mastercard.png"
+import cardLogo3 from "./assets/paypal.png"
 
 const aboutImages = [aboutImg1, aboutImg2, aboutImg3];
+const cardLogos = [cardLogo1, cardLogo2, cardLogo3];
 
 function App() {
 const dispatch = useDispatch();
-// const { events } = useSelector((state) => state.events || {});
 
   useEffect (() => {
     dispatch(getEvents())
@@ -29,7 +32,7 @@ const dispatch = useDispatch();
         <Route path='/about' element={<About aboutImages={aboutImages}/>}/>
         <Route path='/contacts' element={<Contacts/>}/>
         <Route path='/events' element={<Events/>}/>
-        <Route path='/donate' element={<Donate/>}/>
+        <Route path='/donate' element={<Donate cardLogos={cardLogos}/>}/>
       </Routes>
     </>
   );

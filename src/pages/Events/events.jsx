@@ -4,7 +4,6 @@ import styles from "./events.module.scss"
 import { useSelector } from 'react-redux'
 
 export const Events = () => {
-  // const dispatch = useDispatch();
   const { events } = useSelector((state) => state.events || {});
 
   return (

@@ -3,7 +3,7 @@ import axios from "axios";
 
 export const getEvents = createAsyncThunk(
   "getEvents",
-  async (state, { dispatch, rejectWithValue }) => {
+  async (state, { rejectWithValue }) => {
     try {
       const { data } = await axios.get(
         `${process.env.REACT_APP_MAIN_URL}/events`
@@ -15,6 +15,17 @@ export const getEvents = createAsyncThunk(
     }
   }
 );
+
+export const addFeedbacks = createAsyncThunk(
+  "addFeedbacks",
+  async (feedback) => {
+    try {
+      await axios.post(`${process.env.REACT_APP_MAIN_URL}/feedbacks`, feedback);
+    } catch (error) {
+      console.error(error);
+    }
+  }
+)
 
 const eventsSlice = createSlice({
     name: "events",
