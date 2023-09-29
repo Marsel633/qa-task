@@ -5,7 +5,7 @@ export const Layout = ({children}) => {
   return (
     <>
       <Header />
-      <main className={styles.box}>
+      <main className={styles.container}>
       {children}
       </main>
     </>

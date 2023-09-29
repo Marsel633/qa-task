@@ -8,10 +8,20 @@ import { Donate } from './pages/Donate/donate';
 import aboutImg1 from "./assets/about_1.png"
 import aboutImg2 from "./assets/about_2.png"
 import aboutImg3 from "./assets/about_3.png"
+import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { getEvents } from './store/eventsSlice';
 
 const aboutImages = [aboutImg1, aboutImg2, aboutImg3];
 
 function App() {
+const dispatch = useDispatch();
+// const { events } = useSelector((state) => state.events || {});
+
+  useEffect (() => {
+    dispatch(getEvents())
+  },[])
+
   return (
     <>
       <Routes>
