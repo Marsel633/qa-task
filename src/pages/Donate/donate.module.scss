@@ -5,6 +5,8 @@
   .donate__cards {
     width: 60%;
     display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
     justify-content: space-around;
 
     .cards__cardLogo {
@@ -30,29 +32,78 @@
     color: #ff5f00;
 
     .form__items {
-        width: 100%;
+      display: flex;
+      flex-direction: row;
+      gap: 40px;
+
+      div {
+        width: 50%;
         display: flex;
-        flex-direction: row;
-        gap: 40px;
-        div {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
+        flex-direction: column;
+        gap: 20px;
+      }
     }
 
-    input, button {
-        height: 40px;
+    input,
+    button {
+      height: 40px;
     }
 
     .donate__btn {
-        border-radius: 5px;
-            background-color: #ff5f00;
-            border: none;
-            color: #fff;
-            text-transform: uppercase;
-            font-weight: bold;
+      border-radius: 5px;
+      background-color: #ff5f00;
+      border: none;
+      color: #fff;
+      text-transform: uppercase;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .donate {
+    form {
+      gap: 10px;
+      padding: 30px;
+      .form__items {
+        flex-wrap: wrap;
+        gap: 10px;
+        div {
+          width: 100%;
+          gap: 10px;
+        }
+      }
+      input,
+      button {
+        height: 30px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .donate {
+    form {
+      font-size: 12px;
+      gap: 5px;
+      padding: 20px;
+      .form__items {
+        gap: 5px;
+        div {
+          gap: 5px;
+        }
+      }
+      input,
+      button {
+        height: 20px;
+      }
+      input::placeholder {
+        font-size: 12px;
+      }
+      .donate__btn {
+        font-size: 12px;
+      }
     }
   }
 }

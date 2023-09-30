@@ -7,7 +7,7 @@ export const Contacts = () => {
   return (
     <Layout>
       <div className={`${styles.contacts} box`}>
-        <div>
+        <div className={styles.contacts__image}>
           <img src={image} alt="contacts bgimg" />
         </div>
         <div>

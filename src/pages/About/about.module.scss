@@ -1,12 +1,47 @@
 .about {
     padding-top: 50px;
     
-    .about__images img {
-        padding: 0 20px;
+    .about__images {
+        text-align: center;
+        img {
+            width: 440px;
+            height: 270px;
+            padding: 20px;
+        }
     }
 
     .about__desc {
         width: 80%;
         text-align: center;
+    }
+
+    .about__bgImage img {
+        width: 620px;
+        height: 320px;
+    }
+}
+
+@media screen and(max-width: 768px) {
+    .about {
+        .about__bgImage img {
+            width: 500px;
+            height: 260px;
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .about {
+        padding-top: 0;
+        .about__images {
+            img {
+                width: 280px;
+                height: 180px;
+            }
+        }
+        .about__bgImage img {
+            width: 280px;
+            height: 140px;
+        }
     }
 }
